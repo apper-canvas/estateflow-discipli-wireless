@@ -91,12 +91,32 @@ const Clients = () => {
     }
   }
 
-  const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+const formatDate = (dateString) => {
+    if (!dateString) return 'N/A'
+    const date = new Date(dateString)
+    return isNaN(date.getTime()) ? 'Invalid Date' : date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric'
     })
+  }
+
+  // Helper function to safely format numbers and prevent NaN errors
+  const formatCurrency = (value) => {
+    if (value === null || value === undefined || isNaN(Number(value))) {
+      return 'N/A'
+    }
+    const numValue = Number(value)
+    return isNaN(numValue) ? 'N/A' : `$${numValue.toLocaleString()}`
+  }
+
+  // Helper function to safely display numeric values
+  const formatNumber = (value) => {
+    if (value === null || value === undefined || isNaN(Number(value))) {
+      return 'N/A'
+    }
+    const numValue = Number(value)
+    return isNaN(numValue) ? 'N/A' : numValue.toString()
   }
 
   return (
@@ -253,9 +273,9 @@ const Clients = () => {
                         {client.phone}
                       </div>
                     </td>
-                    <td className="px-6 py-4">
+<td className="px-6 py-4">
                       <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(client.status)}`}>
-                        {client.status?.charAt(0).toUpperCase() + client.status?.slice(1)}
+                        {client.status ? client.status.charAt(0).toUpperCase() + client.status.slice(1) : 'Unknown'}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">
@@ -336,8 +356,8 @@ const Clients = () => {
                         {selectedClient.company}
                       </p>
                     )}
-                    <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full mt-2 ${getStatusColor(selectedClient.status)}`}>
-                      {selectedClient.status?.charAt(0).toUpperCase() + selectedClient.status?.slice(1)}
+<span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full mt-2 ${getStatusColor(selectedClient.status)}`}>
+                      {selectedClient.status ? selectedClient.status.charAt(0).toUpperCase() + selectedClient.status.slice(1) : 'Unknown'}
                     </span>
                   </div>
                 </div>
@@ -374,12 +394,12 @@ const Clients = () => {
                           {formatDate(selectedClient.createdAt)}
                         </span>
                       </div>
-                      {selectedClient.budget && (
+{selectedClient.budget && !isNaN(Number(selectedClient.budget)) && (
                         <div className="flex items-center text-sm">
                           <ApperIcon name="DollarSign" size={16} className="text-gray-400 mr-2" />
                           <span className="text-gray-600 dark:text-gray-400">Budget: </span>
                           <span className="text-gray-900 dark:text-white ml-1">
-                            ${selectedClient.budget?.toLocaleString()}
+                            {formatCurrency(selectedClient.budget)}
                           </span>
                         </div>
                       )}
@@ -406,12 +426,12 @@ const Clients = () => {
                   </div>
                 )}
 
-                {/* Preferences */}
-                {selectedClient.preferences && (
+{/* Preferences */}
+                {selectedClient.preferences && typeof selectedClient.preferences === 'object' && (
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Preferences</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {selectedClient.preferences.propertyType && (
+                      {selectedClient.preferences?.propertyType && (
                         <div className="p-3 bg-surface-100 dark:bg-gray-700 rounded-lg">
                           <div className="text-sm font-medium text-gray-900 dark:text-white">Property Type</div>
                           <div className="text-sm text-gray-600 dark:text-gray-400 capitalize">
@@ -419,7 +439,7 @@ const Clients = () => {
                           </div>
                         </div>
                       )}
-                      {selectedClient.preferences.location && (
+                      {selectedClient.preferences?.location && (
                         <div className="p-3 bg-surface-100 dark:bg-gray-700 rounded-lg">
                           <div className="text-sm font-medium text-gray-900 dark:text-white">Preferred Location</div>
                           <div className="text-sm text-gray-600 dark:text-gray-400">
@@ -427,19 +447,21 @@ const Clients = () => {
                           </div>
                         </div>
                       )}
-                      {selectedClient.preferences.minPrice && (
+                      {(selectedClient.preferences?.minPrice || selectedClient.preferences?.maxPrice) && 
+                       (selectedClient.preferences.minPrice !== null && selectedClient.preferences.minPrice !== undefined) && (
                         <div className="p-3 bg-surface-100 dark:bg-gray-700 rounded-lg">
                           <div className="text-sm font-medium text-gray-900 dark:text-white">Price Range</div>
                           <div className="text-sm text-gray-600 dark:text-gray-400">
-                            ${selectedClient.preferences.minPrice?.toLocaleString()} - ${selectedClient.preferences.maxPrice?.toLocaleString()}
+                            {formatCurrency(selectedClient.preferences.minPrice)} - {formatCurrency(selectedClient.preferences.maxPrice)}
                           </div>
                         </div>
                       )}
-                      {selectedClient.preferences.bedrooms && (
+                      {selectedClient.preferences?.bedrooms && 
+                       !isNaN(Number(selectedClient.preferences.bedrooms)) && (
                         <div className="p-3 bg-surface-100 dark:bg-gray-700 rounded-lg">
                           <div className="text-sm font-medium text-gray-900 dark:text-white">Bedrooms</div>
                           <div className="text-sm text-gray-600 dark:text-gray-400">
-                            {selectedClient.preferences.bedrooms}+
+                            {formatNumber(selectedClient.preferences.bedrooms)}+
                           </div>
                         </div>
                       )}
