@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "title": "Schedule property viewing for David Thompson",
+    "type": "appointment",
+    "dueDate": "2024-01-25T14:00:00Z",
+    "clientId": "2",
+    "propertyId": "3",
+    "completed": false,
+    "priority": "high"
+  },
+  {
+    "id": "2",
+    "title": "Follow up on inspection report with Lisa Rodriguez",
+    "type": "follow-up",
+    "dueDate": "2024-01-24T10:30:00Z",
+    "clientId": "3",
+    "propertyId": "1",
+    "completed": false,
+    "priority": "urgent"
+  },
+  {
+    "id": "3",
+    "title": "Send market analysis to Jennifer Martinez",
+    "type": "documentation",
+    "dueDate": "2024-01-26T09:00:00Z",
+    "clientId": "1",
+    "propertyId": null,
+    "completed": false,
+    "priority": "medium"
+  },
+  {
+    "id": "4",
+    "title": "Prepare closing documents for Robert Kim",
+    "type": "closing",
+    "dueDate": "2024-01-23T16:00:00Z",
+    "clientId": "4",
+    "propertyId": "2",
+    "completed": true,
+    "priority": "high"
+  },
+  {
+    "id": "5",
+    "title": "Call Michael Chen about financing options",
+    "type": "call",
+    "dueDate": "2024-01-27T11:00:00Z",
+    "clientId": null,
+    "propertyId": null,
+    "completed": false,
+    "priority": "medium"
+  }
+]

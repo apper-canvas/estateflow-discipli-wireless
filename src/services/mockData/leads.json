@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "Michael Chen",
+    "email": "michael.chen@email.com",
+    "phone": "(555) 123-4567",
+    "stage": "inquiry",
+    "source": "website",
+    "assignedTo": "Sarah Johnson",
+    "createdAt": "2024-01-15T10:30:00Z",
+    "lastContact": "2024-01-15T10:30:00Z",
+    "propertyPreferences": {
+      "type": "condo",
+      "priceRange": "500000-750000",
+      "bedrooms": 2,
+      "location": "downtown"
+    },
+    "notes": ["Interested in downtown condos", "Looking to move by spring"]
+  },
+  {
+    "id": "2",
+    "name": "Jennifer Martinez",
+    "email": "j.martinez@email.com",
+    "phone": "(555) 234-5678",
+    "stage": "qualified",
+    "source": "referral",
+    "assignedTo": "Sarah Johnson",
+    "createdAt": "2024-01-12T14:20:00Z",
+    "lastContact": "2024-01-18T09:15:00Z",
+    "propertyPreferences": {
+      "type": "house",
+      "priceRange": "800000-1200000",
+      "bedrooms": 3,
+      "location": "suburbs"
+    },
+    "notes": ["Referred by previous client", "Pre-approved for $1M", "Wants move-in ready home"]
+  },
+  {
+    "id": "3",
+    "name": "David Thompson",
+    "email": "dthompson@email.com",
+    "phone": "(555) 345-6789",
+    "stage": "viewing",
+    "source": "social",
+    "assignedTo": "Sarah Johnson",
+    "createdAt": "2024-01-08T16:45:00Z",
+    "lastContact": "2024-01-20T11:30:00Z",
+    "propertyPreferences": {
+      "type": "townhouse",
+      "priceRange": "600000-900000",
+      "bedrooms": 3,
+      "location": "midtown"
+    },
+    "notes": ["Scheduled viewing for Saturday", "First-time buyer", "Looking for good schools nearby"]
+  },
+  {
+    "id": "4",
+    "name": "Lisa Rodriguez",
+    "email": "lisa.rodriguez@email.com",
+    "phone": "(555) 456-7890",
+    "stage": "negotiating",
+    "source": "phone",
+    "assignedTo": "Sarah Johnson",
+    "createdAt": "2024-01-05T09:10:00Z",
+    "lastContact": "2024-01-21T15:45:00Z",
+    "propertyPreferences": {
+      "type": "house",
+      "priceRange": "1000000-1500000",
+      "bedrooms": 4,
+      "location": "waterfront"
+    },
+    "notes": ["Made offer on waterfront property", "Negotiating inspection terms", "Flexible on closing date"]
+  },
+  {
+    "id": "5",
+    "name": "Robert Kim",
+    "email": "robert.kim@email.com",
+    "phone": "(555) 567-8901",
+    "stage": "closed",
+    "source": "email",
+    "assignedTo": "Sarah Johnson",
+    "createdAt": "2023-12-20T11:20:00Z",
+    "lastContact": "2024-01-10T14:00:00Z",
+    "propertyPreferences": {
+      "type": "condo",
+      "priceRange": "400000-600000",
+      "bedrooms": 1,
+      "location": "downtown"
+    },
+    "notes": ["Successfully closed on downtown condo", "Paid $525,000", "Happy with the process"]
+  }
+]

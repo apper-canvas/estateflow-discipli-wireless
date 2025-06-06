@@ -1,0 +1,78 @@
+[
+  {
+    "id": "1",
+    "leadId": "2",
+    "firstName": "Jennifer",
+    "lastName": "Martinez",
+    "email": "j.martinez@email.com",
+    "phone": "(555) 234-5678",
+    "type": "buyer",
+    "preferences": {
+      "propertyType": "house",
+      "priceRange": "800000-1200000",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "location": "suburbs",
+      "features": ["garage", "yard", "updated kitchen"]
+    },
+    "viewedProperties": ["4"],
+    "favoriteProperties": ["4"]
+  },
+  {
+    "id": "2",
+    "leadId": "3",
+    "firstName": "David",
+    "lastName": "Thompson",
+    "email": "dthompson@email.com",
+    "phone": "(555) 345-6789",
+    "type": "buyer",
+    "preferences": {
+      "propertyType": "townhouse",
+      "priceRange": "600000-900000",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "location": "midtown",
+      "features": ["good schools", "parking", "modern"]
+    },
+    "viewedProperties": ["3"],
+    "favoriteProperties": ["3"]
+  },
+  {
+    "id": "3",
+    "leadId": "4",
+    "firstName": "Lisa",
+    "lastName": "Rodriguez",
+    "email": "lisa.rodriguez@email.com",
+    "phone": "(555) 456-7890",
+    "type": "buyer",
+    "preferences": {
+      "propertyType": "house",
+      "priceRange": "1000000-1500000",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "location": "waterfront",
+      "features": ["waterfront", "luxury finishes", "privacy"]
+    },
+    "viewedProperties": ["1"],
+    "favoriteProperties": ["1"]
+  },
+  {
+    "id": "4",
+    "leadId": "5",
+    "firstName": "Robert",
+    "lastName": "Kim",
+    "email": "robert.kim@email.com",
+    "phone": "(555) 567-8901",
+    "type": "buyer",
+    "preferences": {
+      "propertyType": "condo",
+      "priceRange": "400000-600000",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "location": "downtown",
+      "features": ["city view", "amenities", "walkable"]
+    },
+    "viewedProperties": ["2"],
+    "favoriteProperties": ["2"]
+  }
+]

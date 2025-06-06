@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "clientId": "1",
+    "type": "phone_call",
+    "date": "2024-01-18T09:15:00Z",
+    "notes": "Discussed pre-approval status and property preferences. Client is ready to view homes.",
+    "outcome": "positive"
+  },
+  {
+    "id": "2",
+    "clientId": "2",
+    "type": "property_viewing",
+    "date": "2024-01-20T11:30:00Z",
+    "notes": "Showed townhouse on Maple Street. Client liked the layout but concerned about parking.",
+    "outcome": "neutral"
+  },
+  {
+    "id": "3",
+    "clientId": "3",
+    "type": "negotiation",
+    "date": "2024-01-21T15:45:00Z",
+    "notes": "Negotiated inspection terms and contingencies. Seller agreed to most requests.",
+    "outcome": "positive"
+  },
+  {
+    "id": "4",
+    "clientId": "4",
+    "type": "closing",
+    "date": "2024-01-10T14:00:00Z",
+    "notes": "Successfully closed on downtown condo. Client very satisfied with the process.",
+    "outcome": "positive"
+  },
+  {
+    "id": "5",
+    "clientId": "1",
+    "type": "email",
+    "date": "2024-01-19T16:20:00Z",
+    "notes": "Sent market analysis and comparable sales data. Client expressed interest in viewing more properties.",
+    "outcome": "positive"
+  }
+]

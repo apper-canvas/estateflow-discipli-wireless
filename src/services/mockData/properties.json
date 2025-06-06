@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "address": "123 Harbor View Drive",
+    "price": 1250000,
+    "type": "house",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2800,
+    "images": [
+      "https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop"
+    ],
+    "status": "active",
+    "listingDate": "2024-01-10T00:00:00Z",
+    "features": ["waterfront", "garage", "fireplace", "updated kitchen", "hardwood floors"]
+  },
+  {
+    "id": "2",
+    "address": "456 Downtown Plaza, Unit 1205",
+    "price": 525000,
+    "type": "condo",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqft": 1200,
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop"
+    ],
+    "status": "sold",
+    "listingDate": "2023-12-15T00:00:00Z",
+    "features": ["city view", "balcony", "gym access", "concierge", "parking included"]
+  },
+  {
+    "id": "3",
+    "address": "789 Maple Street",
+    "price": 750000,
+    "type": "townhouse",
+    "bedrooms": 3,
+    "bathrooms": 2.5,
+    "sqft": 1800,
+    "images": [
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop"
+    ],
+    "status": "active",
+    "listingDate": "2024-01-18T00:00:00Z",
+    "features": ["private patio", "attached garage", "modern finishes", "open floor plan"]
+  },
+  {
+    "id": "4",
+    "address": "321 Oak Avenue",
+    "price": 925000,
+    "type": "house",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 2200,
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
+    ],
+    "status": "pending",
+    "listingDate": "2024-01-05T00:00:00Z",
+    "features": ["large yard", "renovated kitchen", "master suite", "two-car garage"]
+  }
+]
